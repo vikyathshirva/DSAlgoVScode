@@ -3,12 +3,12 @@ package Trees;
 public class diameter {
 
     int result = -1;
-    public int findDiameter(TreeNode root) {
+    public int findDiameter(TreeNode<Integer> root) {
         dfs(root);
         return result;
     }
 
-    public int dfs(TreeNode root) {
+    public int dfs(TreeNode<Integer> root) {
         if (root == null) {
             return -1;
         }

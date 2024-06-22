@@ -3,7 +3,7 @@ package Trees;
 public class sameTree {
     
 
-    public boolean isSameTree(TreeNode a, TreeNode b) {
+    public boolean isSameTree(TreeNode<Integer> a, TreeNode<Integer> b) {
         if(a == null && b == null){
             return true;
         }

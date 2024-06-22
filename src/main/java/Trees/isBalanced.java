@@ -2,7 +2,7 @@ package Trees;
 
 public class isBalanced {
 
-    public int height(TreeNode root) {
+    public int height(TreeNode<Integer> root) {
         if(root == null) {
             return 0;
         }
@@ -12,14 +12,14 @@ public class isBalanced {
     }
 
 
-    public boolean isBalanced(TreeNode root) {
+    public boolean isBalancedFinder(TreeNode<Integer> root) {
         if(root == null) {
             return true;
         }
         int left = height(root.left);
         int right = height(root.right);
 
-        return Math.abs(right - left) <=1 && isBalanced(root.left) && isBalanced(root.right);
+        return Math.abs(right - left) <=1 && isBalancedFinder(root.left) && isBalancedFinder(root.right);
 
     }
     

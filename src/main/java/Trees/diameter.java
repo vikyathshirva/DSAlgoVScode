@@ -3,7 +3,6 @@ package Trees;
 public class diameter {
 
     int result = -1;
-
     public int findDiameter(TreeNode root) {
         dfs(root);
         return result;

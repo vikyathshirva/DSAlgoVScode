@@ -11,8 +11,26 @@ The repository is structured into folders, each representing a specific topic. E
 To run a solution:
 1. Navigate to the appropriate folder.
 2. Open the desired Java file.
-3. Compile and run the file using a Java compiler (e.g., `javac` and `java` commands).
+3. Include the necessary code in the main application file located at `/Users/vikyathshirva/DEV/Java/INTV/src/main/java/MainApp.java`.
+4. Compile and run the `MainApp.java` file using a Java compiler.
 
+### Example
+
+```java
+// MainApp.java
+
+package main.java;
+
+import arrays.SomeArrayProblem;
+
+public class MainApp {
+    public static void main(String[] args) {
+        SomeArrayProblem solution = new SomeArrayProblem();
+        solution.solve(); //or some method that is the entry point
+    }
+}
+
+```
 ## Adding More Solutions
 
 I will be continuously adding more problems and their solutions to this repository. Stay tuned for updates!

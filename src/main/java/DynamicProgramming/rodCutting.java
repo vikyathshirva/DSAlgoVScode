@@ -62,5 +62,27 @@ public class rodCutting {
         return rodSizes[rodSizes.length];
     }
 
+
+    //PATH RECORDING
+    public int maxRevBUPR(int[] rodSizes, int[] prices) {
+        int [] dp = new int[rodSizes.length];
+        int [] s = new int[rodSizes.length];
+        Arrays.fill(dp, 0);
+        for(int j=1;j<rodSizes.length;j++) {
+            int max = Integer.MIN_VALUE;
+            for(int i=0;i<j;i++) {
+                if(max < prices[i] + rodSizes[j-i]) {
+                    max = Math.max(max, prices[i]+ rodSizes[j-i]);
+                    s[j] = i;
+                }
+            }
+            rodSizes[j] = max;
+        }
+
+        //s has the path or choices done 
+        return rodSizes[rodSizes.length];
+    }
+    
+
     
 }

@@ -11,6 +11,7 @@ public class generateSubsets {
     public generateSubsets(int n) {
         this.n = n;
         list = new ArrayList<>();
+        allSubsets = new ArrayList<>();
     }
 
     public void search(int k) {

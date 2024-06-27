@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package DynamicProgramming.Strings;
 
 import java.util.*;
 

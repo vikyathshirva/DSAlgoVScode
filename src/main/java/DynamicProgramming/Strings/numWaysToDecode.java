@@ -68,6 +68,6 @@ public class numWaysToDecode {
     private static void assertDecodings(SimpleTestLibrary testLibrary, String input, int expected) {
         numWaysToDecode sol = new numWaysToDecode();
         int result = sol.numDecodings(input);
-        testLibrary.assertEquals(expected, result);
+        SimpleTestLibrary.assertEquals(expected, result);
     }
 }

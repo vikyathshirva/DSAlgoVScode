@@ -1,4 +1,4 @@
-package DynamicProgramming.Subsequences;
+package DynamicProgramming.SubsequencesOrSubstrings;
 
 public class longestPalindromicSubstring {
 

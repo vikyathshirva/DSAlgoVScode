@@ -1,9 +1,8 @@
-package DynamicProgramming.Subsequences;
+package DynamicProgramming.SubsequencesOrSubstrings;
 
 import java.util.*;
 
 public class subsetSumEqualsTarget {
-
 
     /**
      * 

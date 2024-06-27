@@ -1,4 +1,4 @@
-import DynamicProgramming.Subsequences.numWaysToDecode;
+import DynamicProgramming.SubsequencesOrSubstrings.numWaysToDecode;
 
 public class MainApp {
 

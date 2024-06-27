@@ -2,6 +2,8 @@ package DynamicProgramming.Strings;
 
 import java.util.HashMap;
 
+import TestLibrary.*;
+
 public class numWaysToDecode {
     public int numDecodings(String s) {
         if (s == null || s.length() == 0) {
@@ -42,12 +44,30 @@ public class numWaysToDecode {
         return count;
     }
 
-    public static void main(String[] args) {
+    public static void run() {
+        SimpleTestLibrary testLibrary = new SimpleTestLibrary();
+        testLibrary.test("1", () -> {
+            assertDecodings(testLibrary, "10", 1);
+        });
+        testLibrary.test("2", () -> {
+            assertDecodings(testLibrary, "06", 0);
+        });
+        testLibrary.test("3", () -> {
+            assertDecodings(testLibrary, "226", 3);
+        });
+        testLibrary.test("4", () -> {
+            assertDecodings(testLibrary, "0", 0);
+        });
+        testLibrary.test("5", () -> {
+            assertDecodings(testLibrary, "123", 3);
+        });
+        // Execute all defined test cases
+        testLibrary.runTests();
+    }
+
+    private static void assertDecodings(SimpleTestLibrary testLibrary, String input, int expected) {
         numWaysToDecode sol = new numWaysToDecode();
-        System.out.println(sol.numDecodings("10")); // Expected output: 1
-        System.out.println(sol.numDecodings("06")); // Expected output: 0
-        System.out.println(sol.numDecodings("226")); // Expected output: 3
-        System.out.println(sol.numDecodings("0")); // Expected output: 0
-        System.out.println(sol.numDecodings("123")); // Expected output: 3
+        int result = sol.numDecodings(input);
+        testLibrary.assertEquals(expected, result);
     }
 }

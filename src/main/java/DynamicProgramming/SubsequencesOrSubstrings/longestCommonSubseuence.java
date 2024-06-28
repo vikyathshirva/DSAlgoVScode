@@ -27,7 +27,7 @@ public class longestCommonSubseuence {
 
 
     public int findLCSMEM(String a, String b) {
-        int[][] dp = new int[a.length()][b.length()];
+        int[][] dp = new int[a.length()+1][b.length()+1];
         for(int[] dpRow : dp) {
             Arrays.fill(dpRow, -1);
         }
@@ -45,6 +45,8 @@ public class longestCommonSubseuence {
 
         if(a.charAt(len1) == b.charAt(len2)) {
             dp[len1][len2] = 1+ finderMEM(a,b,a.length()-1, b.length()-1, dp);
+        } else {
+            dp[len1][len2] = Math.max(finderMEM(a, b, len1-1, len2, dp), finderMEM(a, b, len1, len2-1, dp));
         }
 
         return dp[len1][len2];

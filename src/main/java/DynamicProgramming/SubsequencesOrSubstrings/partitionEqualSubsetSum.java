@@ -13,11 +13,11 @@ public class partitionEqualSubsetSum {
             return false;
         }
 
-        return partitionEqualSubsetSum(nums, curSum);
+        return partitionEqualSubsetSumSolver(nums, curSum);
     }
 
 
-    public boolean partitionEqualSubsetSum(int[] nums, int target) {
+    public boolean partitionEqualSubsetSumSolver(int[] nums, int target) {
         int n = nums.length;
         boolean [][] dp = new boolean[n][target+1];
         for(int i=0;i<n;i++) {

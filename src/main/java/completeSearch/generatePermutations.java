@@ -1,4 +1,4 @@
-package completeSearch;
+package CompleteSearch;
 import java.util.*;
 
 

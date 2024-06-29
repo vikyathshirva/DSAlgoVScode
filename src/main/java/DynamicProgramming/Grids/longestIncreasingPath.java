@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 
 public class longestIncreasingPath {
-    public int longestIncreasingPath(int[][] mat) {
+    public int longestIncreasingPathSolver(int[][] mat) {
         int rows = mat.length;
         int cols = mat[0].length;
         int[][]dp = new int[rows][cols];

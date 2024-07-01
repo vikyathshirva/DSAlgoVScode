@@ -1,8 +1,8 @@
 package Trees.Traversals;
 import Trees.TreeNode;
 import java.util.*;
-public class zigZag {
 
+public class zigZag {
 
     public List<List<Integer>> zigZagOrder(TreeNode<Integer> root) {
         List<List<Integer>> res = new ArrayList<>();
@@ -33,8 +33,6 @@ public class zigZag {
         }
 
         return res;
-        
-
     }
     
 }
